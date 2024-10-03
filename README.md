@@ -39,11 +39,11 @@ This project is divided in the following key sections:
 ### Executing Program
 1. Run the following commands in project's directory to set up the database, train model and save the model.
     - To run ETL pipeline to clean data and store the processed data in the database<br>
-        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/disaster_response_db.db`<br>
+        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`<br>
 	The ETL pipeline is in process_data.py.The next two arguments are input data and the last argument is the SQLite Database in which we want to save the cleaned data. 		DisasterResponse.db already exists in data folder but the above command will still run and replace the file with same information.
 	
     - To run the ML pipeline that loads data from DB, trains classifier and saves the classifier as a pickle file<br>
-        `python models/train_classifier.py data/disaster_response_db.db models/classifier.pkl` <br>
+        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl` <br>
 	This will use cleaned data to train the model, improve the model with grid search and saved the model to a pickle file (classifer.pkl). 
 	classifier.pkl already exists but the above command will still run and replace the file will same information.
 
@@ -56,10 +56,10 @@ This project is divided in the following key sections:
 ### Additional Material
 
 In the **data** and **models** folder, the two jupyter notebooks that will help to understand how the model works:
-1. **ETL Preparation Notebook**: learn everything about the implemented ETL pipeline
-2. **ML Pipeline Preparation Notebook**: look at the Machine Learning Pipeline developed with NLTK and Scikit-Learn
+1. **Disaster response ETL Pipeline**: learn everything about the implemented ETL pipeline
+2. **Disaster Response ML pipeline**: look at the Machine Learning Pipeline developed with NLTK and Scikit-Learn
 
-You can use **ML Pipeline Preparation Notebook** to re-train/tune the model through a dedicated Grid Search.
+You can use **Disaster Response ML pipeline** to re-train/tune the model through a dedicated Grid Search.
 
 <a name="importantfiles"></a>
 ### Important Files
